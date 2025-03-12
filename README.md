@@ -37,19 +37,19 @@ The EV Charging Data Analysis project aims to analyze electric vehicle (EV) char
   - Utilization Rate: Helped allocate resources efficiently
 
 # DAX Queries Used
--- Total Charging Sessions
+- Total Charging Sessions
 CALCULATE(COUNT(Sessions[Session ID]))
 
--- Revenue Per Station
+- Revenue Per Station
 SUMX(Stations, Stations[Cost Per Session] * Stations[Total Sessions])
 
--- Average Energy Consumption
+- Average Energy Consumption
 AVERAGE(Sessions[Energy Consumed (kWh)])
 
--- Peak Hour Usage
+- Peak Hour Usage
 MAX(ChargingData[Session Count])
 
--- Utilization Rate Calculation
+- Utilization Rate Calculation
 (Total Sessions / Available Slots) * 100
 
 # Business Impact
